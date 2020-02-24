@@ -1,0 +1,106 @@
+
+          <div class="card">
+            <div class="card-body">
+              <form class="forms-sample"  >
+
+                <div class="form-group row">
+                  <label class="col-sm-2 col-form-label">ACTIVITIES : </label>
+                  <div class="col-sm-10">
+                    <div class="row">
+                      <div class="form-check col-sm-4">
+                        <label class="form-check-label">
+                          <input type="radio" class="form-check-input" name="activities"  value="onlygym" checked="" (change)="changeActivities($event)"> Only Gym  
+                          <i class="input-helper"></i></label>
+                      </div>
+                      <div class="form-check col-sm-4">
+                        <label class="form-check-label">
+                          <input type="radio" class="form-check-input" name="activities"   value="gymplustwo" (change)="changeActivities($event)"> Gym + 2
+                          <i class="input-helper"></i></label>
+                      </div>
+                      <div class="form-check col-sm-4">
+                        <label class="form-check-label">
+                          <input type="radio" class="form-check-input" name="activities"  value="morethantwo" (change)="changeActivities($event)"> More Than Two
+                          <i class="input-helper"></i></label>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label class="col-sm-2 col-form-label">EQUIPMENTS : </label>
+                  <div class="col-sm-10">
+                    <div class="row">
+                      <div class="form-check col-sm-4">
+                        <label class="form-check-label">
+                          <input type="radio" class="form-check-input" name="equipments"   value="marginal" checked="" (change)="changeEquipments($event)">Marginal         
+                          <i class="input-helper"></i></label>
+                      </div>
+                      <div class="form-check col-sm-4">
+                        <label class="form-check-label">
+                          <input type="radio" class="form-check-input" name="equipments"  value="enough" (change)="changeEquipments($event)" >Enough
+                          <i class="input-helper"></i></label>
+                      </div>
+                      <div class="form-check col-sm-4">
+                        <label class="form-check-label">
+                          <input type="radio" class="form-check-input" name="equipments"   value="full" (change)="changeEquipments($event)">Full
+                          <i class="input-helper"></i></label>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label class="col-sm-2 col-form-label">TRAINERS : </label>
+                  <div class="col-sm-10">
+                    <div class="row">
+                      <div class="form-check col-sm-4">
+                        <label class="form-check-label">
+                          <input type="radio" class="form-check-input" name="trainers"  value="notrainer" checked=""  (change)="changeTrainer($event)">No Trainer      
+                          <i class="input-helper"></i></label>
+                      </div>
+                      <div class="form-check col-sm-4">
+                        <label class="form-check-label">
+                          <input type="radio" class="form-check-input" name="trainers"   value="notcertified" (change)="changeTrainer($event)">None Certified
+                          <i class="input-helper"></i></label>
+                      </div>
+                      <div class="form-check col-sm-4">
+                        <label class="form-check-label">
+                          <input type="radio" class="form-check-input" name="trainers"   value="certified" (change)="changeTrainer($event)">Certified
+                          <i class="input-helper"></i></label>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label class="col-sm-2 col-form-label">UNISEX : </label>
+                  <div class="col-sm-10">
+                    <div class="row">
+                      <div class="form-check col-sm-4">
+                        <label class="form-check-label">
+                          <input type="radio" class="form-check-input" name="unisex"  value="no" checked="" (change)="changeUnisex($event)">No
+                          <i class="input-helper"></i></label>
+                      </div>
+                      <div class="form-check col-sm-4">
+                        <label class="form-check-label">
+                          <input type="radio" class="form-check-input" name="unisex" value="yes" (change)="changeUnisex($event)">Yes 
+                          <i class="input-helper"></i></label>
+                      </div>
+                     
+
+                    </div>
+                  </div>
+                </div>
+                <div >
+                <label > {{price | currency:'INR'}}</label>
+              </div>
+                <button  class="btn btn-primary mr-2" (click)="getPrice()" >Get Price</button>
+                <!--button class="btn btn-light">Cancel</button-->
+               
+              </form>
+
+            </div>
+          </div>

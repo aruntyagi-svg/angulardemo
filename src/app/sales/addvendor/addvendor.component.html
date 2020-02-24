@@ -1,0 +1,102 @@
+
+        
+          <div class="card">
+            <div class="card-body">
+              <form [formGroup]="vendorForm" (ngSubmit)="saveVendor()" class="forms-sample">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="exampleInputName1" placeholder="Name" formControlName="name" [(ngModel)]="vendor.vendorName">
+               </div>
+
+                <div class="form-group row">
+                  <div class="col-md-6">
+                    <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Mobile No." formControlName="phone" [(ngModel)]="vendor.vendorPhone"></div>
+                  <div class="col-md-6">
+                    <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email" formControlName="email" [(ngModel)]="vendor.vendorEmail">
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-md-8">
+                    <textarea class="form-control" id="exampleTextarea1" rows="1" placeholder="Address" formControlName="address" [(ngModel)]="vendor.vendorAddress"></textarea>
+                  </div>
+                  <div class="col-md-4">
+                    <select class="form-control" id="exampleSelectGender" formControlName="gender" [(ngModel)]="vendor.vendorGender">
+                      <option selected>Gender</option>
+                      <option>Male</option>
+                      <option>Female</option>
+                    </select></div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-md-4">
+                    <select class="form-control" id="exampleSelectGender" formControlName="city" [(ngModel)]="vendor.city">
+                      <option selected>City</option>
+                      <option>City 1</option>
+                      <option>City 2</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4">
+                    <select class="form-control" id="exampleSelectGender" formControlName="state" [(ngModel)]="vendor.state">
+                      <option selected>State</option>
+                      <option>State 1</option>
+                      <option>State 2</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4">
+                    <select class="form-control" id="exampleSelectGender" formControlName="country" [(ngModel)]="vendor.country">
+                      <option selected>Contry</option>
+                      <option>Contry 1</option>
+                      <option>Contry 2</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-md-6">
+                    <input type="text" class="form-control" id="exampleInputCity1" placeholder="Aadhar Number" formControlName="aadhaar" [(ngModel)]="vendor.vendorAadhaar">
+                  </div>
+                  <div class="col-md-6">
+                    <input type="text" class="form-control" id="exampleInputCity1" placeholder="PAN Number" formControlName="pan" [(ngModel)]="vendor.vendorPAN">
+                  </div>
+
+
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-2 col-form-label">Vendor Type : </label>
+                  <div class="col-sm-5">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="totalGym" id="membershipRadios1"
+                          value='1' onclick="show1();" checked="" formControlName="totalGym" [(ngModel)]="vendor.numberOfGyms"> Single
+                        <i class="input-helper"></i></label>
+                    </div>
+                  </div>
+                  <div class="col-sm-5">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="totalGym" id="membershipRadios2"
+                          value="igottwo" onclick="show2();"  > Multiple
+                        <i class="input-helper"></i></label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group row hide" id="div1">
+                  <label class="col-sm-2 col-form-label">Total No. Of Gyms : </label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="exampleInputCity1" placeholder="3" formControlName="totalGym" [(ngModel)]="vendor.numberOfGyms">
+                  </div>
+                </div>
+                <style>
+                  .hide {
+                    display: none;
+                  }
+                </style>
+
+                <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                <!--button class="btn btn-light">Cancel</button-->
+              </form>
+            </div>
+          </div>
+      
+          

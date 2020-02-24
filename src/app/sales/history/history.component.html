@@ -1,0 +1,32 @@
+<div class="card">
+    <div class="card-body">
+      <div class="row">
+        <div class="table-sorter-wrapper col-lg-12 table-responsive">
+          <table id="sortable-table-1" class="table">
+            <thead>
+              <tr>
+                <th>S. No</th>
+                <th class="sortStyle ascStyle">Name</th>
+                <th class="sortStyle unsortStyle">Phone</th>
+                <th class="sortStyle unsortStyle">Address</th>
+                <th class="sortStyle unsortStyle">M. Price</th>
+                <th class="sortStyle unsortStyle">Date</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr *ngFor="let history of historyList; index as i" appHighlight>
+                <td>{{i+1}}</td>
+                <td>{{history.name}}</td>
+                <td>{{history.phone}}</td>
+                <td>{{history.address}}</td>
+                <td> {{history.maxPrice | currency:'INR'}}</td>
+                <td>{{history.date|date}}</td>
+              </tr>
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>

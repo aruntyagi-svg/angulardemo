@@ -1,0 +1,58 @@
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+    <ul class="nav">
+      <li class="nav-item pt-3 ">
+        <a class="nav-link d-block" href="#">
+          <img class="sidebar-brand-logo" src="assets/images/logo.png" alt="">
+          <img class="sidebar-brand-logomini" src="assets/images/logo-mini.png" alt="">              
+        </a>
+      </li>
+      <li class="nav-item nav-profile border-bottom">
+        <a href="#" class="nav-link flex-column">
+          <div class="nav-profile-image">
+            <img src="assets/images/{{name}}.jpg" alt="profile">
+            <!--change to offline or busy as needed-->
+          </div>
+          <div class="nav-profile-text d-flex ml-0 mb-3 flex-column">
+            <span class="font-weight-semibold mb-1 mt-2 text-center">{{name}}</span>
+            <span class="text-secondary icon-sm text-center">{{email}}</span>
+          </div>
+        </a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" routerLink="add-vendor" routerLinkActive="active">
+          <i class="mdi mdi-plus menu-icon"></i>
+          <span class="menu-title">Add Vendor</span>
+        </a>
+      </li>          
+      <li class="nav-item ">
+        <a class="nav-link" routerLink="history" routerLinkActive="active">
+          <i class="mdi mdi-history menu-icon"></i>
+          <span class="menu-title">History</span>
+        </a>
+      </li>      
+      <li class="nav-item ">
+        <a class="nav-link" routerLink="calculator" routerLinkActive="active">
+          <i class="mdi mdi-calculator menu-icon"></i>
+          <span class="menu-title">Calculator</span>
+        </a>
+      </li> 
+      <li class="nav-item ">
+        <a class="nav-link" routerLink="wallet" routerLinkActive="active">
+          <i class="mdi mdi-wallet menu-icon"></i>
+          <span class="menu-title">Wallet</span>
+        </a>
+      </li>   
+      <li class="nav-item">
+        <a class="nav-link" routerLink="targets" routerLinkActive="active">
+          <i class="mdi mdi-forum menu-icon"></i>
+          <span class="menu-title">Target</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="#" (click)="logout()">
+        <i class="mdi mdi-logout menu-icon"></i>
+        <span class="menu-title">Logout</span>
+        </a>
+        </li>
+    </ul>
+  </nav>
